@@ -6,6 +6,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 
 public class AlumnoDAO {
 
@@ -28,30 +29,7 @@ public class AlumnoDAO {
         }
     }
 
-    public Alumno buscarPorId(int id) {
-        String sql = "SELECT * FROM alumno WHERE id_alumno = ?";
-        Alumno alumno = null;
+    /*public ArrayList<Alumno> getAllAlumnos() {
 
-        try (Connection con = Conexion.getConexion();
-             PreparedStatement pst = con.prepareStatement(sql)) {
-
-            pst.setInt(1, id);
-
-            try (ResultSet rs = pst.executeQuery()) {
-                if (rs.next()) {
-                    alumno = new Alumno();
-                    alumno.setId_alumno(rs.getInt("id_alumno"));
-                    alumno.setNombre(rs.getString("nombre"));
-                    alumno.setEmail(rs.getString("email"));
-                    alumno.setIsMayorEdad(rs.getInt("isMayorEdad"));
-                    alumno.setId_curso(rs.getInt("id_curso"));
-                }
-            }
-
-        } catch (SQLException e) {
-            System.err.println("Error al buscar: " + e.getMessage());
-        }
-
-        return alumno;
-    }
+    }*/
 }
