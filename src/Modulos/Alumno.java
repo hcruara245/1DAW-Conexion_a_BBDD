@@ -6,6 +6,24 @@ public class Alumno {
     private String email;
     private int isMayorEdad;
     private int id_curso;
+    private String nombreCurso; // CONSEGUIR EL NOMBRE DEL CURSO
+    private int nivel;
+
+    public int getNivel() {
+        return nivel;
+    }
+
+    public void setNivel(int nivel) {
+        this.nivel = nivel;
+    }
+
+    public String getNombreCurso() {
+        return nombreCurso;
+    }
+
+    public void setNombreCurso(String nombreCurso) {
+        this.nombreCurso = nombreCurso;
+    }
 
     public Alumno(int id_alumno, String nombre, String email, int isMayorEdad, int id_curso) {
         this.id_alumno = id_alumno;
